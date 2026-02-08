@@ -11,7 +11,8 @@ export default function Footer() {
               <span>🦉</span> Master Analytica
             </h3>
             <p className="text-primary-foreground/70 text-sm mb-4">
-              Consultoria especializada em Business Intelligence, Inteligência Artificial e Integração de Sistemas.
+              Consultoria especializada em Business Intelligence, Inteligência
+              Artificial e Integração de Sistemas.
             </p>
           </div>
 
@@ -48,7 +49,10 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="mt-8 flex flex-col items-center justify-between gap-4 md:flex-row text-sm text-primary-foreground/70">
-          <p>&copy; {currentYear} Master Analytica Ltda. Todos os direitos reservados.</p>
+          <p>
+            &copy; {currentYear} Master Analytica Ltda. Todos os direitos
+            reservados.
+          </p>
           <p>
             <a
               href="https://analytica.tec.br"

@@ -53,7 +53,7 @@ export default function ContactForm() {
   };
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -114,7 +114,8 @@ export default function ContactForm() {
             Entre em Contato
           </h2>
           <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
-            Tem um projeto em mente? Vamos conversar sobre como podemos ajudá-lo.
+            Tem um projeto em mente? Vamos conversar sobre como podemos
+            ajudá-lo.
           </p>
         </div>
 
@@ -141,7 +142,9 @@ export default function ContactForm() {
                 <MapPin className="h-6 w-6 text-accent" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-1">Localização</h3>
+                <h3 className="font-semibold text-foreground mb-1">
+                  Localização
+                </h3>
                 <p className="text-foreground/70">Rio de Janeiro, Brasil</p>
               </div>
             </div>
@@ -151,7 +154,9 @@ export default function ContactForm() {
                 <Phone className="h-6 w-6 text-accent" />
               </div>
               <div>
-                <h3 className="font-semibold text-foreground mb-1">Disponibilidade</h3>
+                <h3 className="font-semibold text-foreground mb-1">
+                  Disponibilidade
+                </h3>
                 <p className="text-foreground/70">
                   Disponível para projetos e consultoria
                 </p>
@@ -162,7 +167,10 @@ export default function ContactForm() {
           {/* Contact Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block font-medium text-foreground mb-2">
+              <label
+                htmlFor="name"
+                className="block font-medium text-foreground mb-2"
+              >
                 Nome *
               </label>
               <input
@@ -180,7 +188,10 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label htmlFor="email" className="block font-medium text-foreground mb-2">
+              <label
+                htmlFor="email"
+                className="block font-medium text-foreground mb-2"
+              >
                 Email *
               </label>
               <input
@@ -198,7 +209,10 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label htmlFor="company" className="block font-medium text-foreground mb-2">
+              <label
+                htmlFor="company"
+                className="block font-medium text-foreground mb-2"
+              >
                 Empresa
               </label>
               <input
@@ -213,7 +227,10 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label htmlFor="phone" className="block font-medium text-foreground mb-2">
+              <label
+                htmlFor="phone"
+                className="block font-medium text-foreground mb-2"
+              >
                 Telefone
               </label>
               <input
@@ -228,7 +245,10 @@ export default function ContactForm() {
             </div>
 
             <div>
-              <label htmlFor="message" className="block font-medium text-foreground mb-2">
+              <label
+                htmlFor="message"
+                className="block font-medium text-foreground mb-2"
+              >
                 Mensagem *
               </label>
               <textarea
@@ -241,7 +261,9 @@ export default function ContactForm() {
                 placeholder="Descreva seu projeto ou demanda..."
               />
               {errors.message && (
-                <p className="text-destructive text-sm mt-1">{errors.message}</p>
+                <p className="text-destructive text-sm mt-1">
+                  {errors.message}
+                </p>
               )}
             </div>
 
@@ -253,8 +275,12 @@ export default function ContactForm() {
                 onChange={(e) => setCookieConsent(e.target.checked)}
                 className="mt-1 cursor-pointer"
               />
-              <label htmlFor="consent" className="text-sm text-foreground/70 cursor-pointer">
-                Concordo em receber comunicações e aceito a política de cookies para análise de dados de marketing.
+              <label
+                htmlFor="consent"
+                className="text-sm text-foreground/70 cursor-pointer"
+              >
+                Concordo em receber comunicações e aceito a política de cookies
+                para análise de dados de marketing.
               </label>
             </div>
             {errors.consent && (

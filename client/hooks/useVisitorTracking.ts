@@ -12,7 +12,9 @@ interface VisitorData {
 export function useVisitorTracking() {
   useEffect(() => {
     // Check if user has accepted cookies
-    const cookieConsent = localStorage.getItem("master_analytica_cookie_consent");
+    const cookieConsent = localStorage.getItem(
+      "master_analytica_cookie_consent",
+    );
 
     if (cookieConsent === "accepted") {
       // Track page view

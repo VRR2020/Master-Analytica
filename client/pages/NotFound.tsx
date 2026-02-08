@@ -14,7 +14,8 @@ export default function NotFound() {
             Página não encontrada
           </h2>
           <p className="mb-8 text-lg text-foreground/70 max-w-2xl mx-auto">
-            A página que você está procurando não existe. Por favor, volte à página inicial ou entre em contato conosco para mais informações.
+            A página que você está procurando não existe. Por favor, volte à
+            página inicial ou entre em contato conosco para mais informações.
           </p>
           <Link
             to="/"

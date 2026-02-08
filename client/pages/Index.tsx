@@ -33,8 +33,9 @@ export default function Index() {
               </h1>
 
               <p className="mb-8 text-lg text-primary-foreground/80 max-w-xl leading-relaxed">
-                Consultoria especializada em Business Intelligence, Inteligência Artificial e
-                Integração de Sistemas. Transformamos dados em decisões estratégicas.
+                Consultoria especializada em Business Intelligence, Inteligência
+                Artificial e Integração de Sistemas. Transformamos dados em
+                decisões estratégicas.
               </p>
 
               <div className="flex flex-col gap-4 sm:flex-row">
@@ -50,15 +51,21 @@ export default function Index() {
               <div className="mt-12 grid gap-6 grid-cols-2 sm:grid-cols-3">
                 <div>
                   <div className="text-3xl font-bold">10+</div>
-                  <p className="text-sm text-primary-foreground/70">Anos de experiência</p>
+                  <p className="text-sm text-primary-foreground/70">
+                    Anos de experiência
+                  </p>
                 </div>
                 <div>
                   <div className="text-3xl font-bold">50+</div>
-                  <p className="text-sm text-primary-foreground/70">Projetos entregues</p>
+                  <p className="text-sm text-primary-foreground/70">
+                    Projetos entregues
+                  </p>
                 </div>
                 <div>
                   <div className="text-3xl font-bold">20+</div>
-                  <p className="text-sm text-primary-foreground/70">Ferramentas dominadas</p>
+                  <p className="text-sm text-primary-foreground/70">
+                    Ferramentas dominadas
+                  </p>
                 </div>
               </div>
             </div>
@@ -81,7 +88,8 @@ export default function Index() {
               Nossos Serviços
             </h2>
             <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
-              Soluções completas em BI, IA e integração de sistemas para impulsionar seu negócio
+              Soluções completas em BI, IA e integração de sistemas para
+              impulsionar seu negócio
             </p>
           </div>
 
@@ -95,20 +103,29 @@ export default function Index() {
                 Business Intelligence
               </h3>
               <p className="mb-6 text-foreground/70">
-                Dashboards interativos, análise de dados e visualizações com Power BI, Tableau e
-                Metabase.
+                Dashboards interativos, análise de dados e visualizações com
+                Power BI, Tableau e Metabase.
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex gap-2">
-                  <CheckCircle2 size={16} className="text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle2
+                    size={16}
+                    className="text-accent flex-shrink-0 mt-0.5"
+                  />
                   <span>Power BI & Tableau</span>
                 </li>
                 <li className="flex gap-2">
-                  <CheckCircle2 size={16} className="text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle2
+                    size={16}
+                    className="text-accent flex-shrink-0 mt-0.5"
+                  />
                   <span>Data Modeling</span>
                 </li>
                 <li className="flex gap-2">
-                  <CheckCircle2 size={16} className="text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle2
+                    size={16}
+                    className="text-accent flex-shrink-0 mt-0.5"
+                  />
                   <span>ETL Development</span>
                 </li>
               </ul>
@@ -123,20 +140,29 @@ export default function Index() {
                 Inteligência Artificial
               </h3>
               <p className="mb-6 text-foreground/70">
-                Soluções de IA, machine learning e automação para otimizar processos e criar
-                novos produtos.
+                Soluções de IA, machine learning e automação para otimizar
+                processos e criar novos produtos.
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex gap-2">
-                  <CheckCircle2 size={16} className="text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle2
+                    size={16}
+                    className="text-accent flex-shrink-0 mt-0.5"
+                  />
                   <span>Machine Learning</span>
                 </li>
                 <li className="flex gap-2">
-                  <CheckCircle2 size={16} className="text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle2
+                    size={16}
+                    className="text-accent flex-shrink-0 mt-0.5"
+                  />
                   <span>Python & Data Science</span>
                 </li>
                 <li className="flex gap-2">
-                  <CheckCircle2 size={16} className="text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle2
+                    size={16}
+                    className="text-accent flex-shrink-0 mt-0.5"
+                  />
                   <span>Automação de Processos</span>
                 </li>
               </ul>
@@ -151,20 +177,29 @@ export default function Index() {
                 Integração de Sistemas
               </h3>
               <p className="mb-6 text-foreground/70">
-                Conecte seus sistemas, APIs e pipelines de dados para uma visão unificada do seu
-                negócio.
+                Conecte seus sistemas, APIs e pipelines de dados para uma visão
+                unificada do seu negócio.
               </p>
               <ul className="space-y-2 text-sm">
                 <li className="flex gap-2">
-                  <CheckCircle2 size={16} className="text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle2
+                    size={16}
+                    className="text-accent flex-shrink-0 mt-0.5"
+                  />
                   <span>API Integration</span>
                 </li>
                 <li className="flex gap-2">
-                  <CheckCircle2 size={16} className="text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle2
+                    size={16}
+                    className="text-accent flex-shrink-0 mt-0.5"
+                  />
                   <span>Data Pipelines</span>
                 </li>
                 <li className="flex gap-2">
-                  <CheckCircle2 size={16} className="text-accent flex-shrink-0 mt-0.5" />
+                  <CheckCircle2
+                    size={16}
+                    className="text-accent flex-shrink-0 mt-0.5"
+                  />
                   <span>Cloud & DW</span>
                 </li>
               </ul>
@@ -181,7 +216,8 @@ export default function Index() {
               Competências Técnicas
             </h2>
             <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
-              10+ anos de experiência com as principais ferramentas e tecnologias do mercado
+              10+ anos de experiência com as principais ferramentas e
+              tecnologias do mercado
             </p>
           </div>
 
@@ -193,20 +229,16 @@ export default function Index() {
                 BI & Analytics
               </h4>
               <div className="flex flex-wrap gap-2">
-                {[
-                  "Power BI",
-                  "Tableau",
-                  "Metabase",
-                  "DAX",
-                  "Power Query",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className="inline-block rounded-full bg-accent/10 px-3 py-1 text-sm text-accent font-medium"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                {["Power BI", "Tableau", "Metabase", "DAX", "Power Query"].map(
+                  (skill) => (
+                    <span
+                      key={skill}
+                      className="inline-block rounded-full bg-accent/10 px-3 py-1 text-sm text-accent font-medium"
+                    >
+                      {skill}
+                    </span>
+                  ),
+                )}
               </div>
             </div>
 
@@ -265,20 +297,16 @@ export default function Index() {
                 Web & Cloud
               </h4>
               <div className="flex flex-wrap gap-2">
-                {[
-                  "Laravel",
-                  "Angular",
-                  "ASP.NET",
-                  "AWS",
-                  "Azure",
-                ].map((skill) => (
-                  <span
-                    key={skill}
-                    className="inline-block rounded-full bg-accent/10 px-3 py-1 text-sm text-accent font-medium"
-                  >
-                    {skill}
-                  </span>
-                ))}
+                {["Laravel", "Angular", "ASP.NET", "AWS", "Azure"].map(
+                  (skill) => (
+                    <span
+                      key={skill}
+                      className="inline-block rounded-full bg-accent/10 px-3 py-1 text-sm text-accent font-medium"
+                    >
+                      {skill}
+                    </span>
+                  ),
+                )}
               </div>
             </div>
 
@@ -289,11 +317,7 @@ export default function Index() {
                 Idiomas
               </h4>
               <div className="flex flex-wrap gap-2">
-                {[
-                  "Português",
-                  "English",
-                  "Español",
-                ].map((lang) => (
+                {["Português", "English", "Español"].map((lang) => (
                   <span
                     key={lang}
                     className="inline-block rounded-full bg-accent/10 px-3 py-1 text-sm text-accent font-medium"
@@ -311,20 +335,16 @@ export default function Index() {
                 Metodologias
               </h4>
               <div className="flex flex-wrap gap-2">
-                {[
-                  "SCRUM",
-                  "Agile",
-                  "JIRA",
-                  "Redmine",
-                  "Power Automate",
-                ].map((method) => (
-                  <span
-                    key={method}
-                    className="inline-block rounded-full bg-accent/10 px-3 py-1 text-sm text-accent font-medium"
-                  >
-                    {method}
-                  </span>
-                ))}
+                {["SCRUM", "Agile", "JIRA", "Redmine", "Power Automate"].map(
+                  (method) => (
+                    <span
+                      key={method}
+                      className="inline-block rounded-full bg-accent/10 px-3 py-1 text-sm text-accent font-medium"
+                    >
+                      {method}
+                    </span>
+                  ),
+                )}
               </div>
             </div>
           </div>
@@ -338,8 +358,8 @@ export default function Index() {
             Pronto para transformar seus dados?
           </h2>
           <p className="mb-8 text-lg text-primary-foreground/80 max-w-2xl mx-auto">
-            Entre em contato conosco para discutir como podemos ajudá-lo a alcançar seus objetivos
-            de negócio.
+            Entre em contato conosco para discutir como podemos ajudá-lo a
+            alcançar seus objetivos de negócio.
           </p>
           <a
             href="#contact"

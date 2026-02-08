@@ -6,7 +6,9 @@ export default function CookieConsent() {
 
   useEffect(() => {
     // Check if user has already accepted cookies
-    const cookieConsent = localStorage.getItem("master_analytica_cookie_consent");
+    const cookieConsent = localStorage.getItem(
+      "master_analytica_cookie_consent",
+    );
     if (!cookieConsent) {
       setShowBanner(true);
     }
@@ -49,10 +51,13 @@ export default function CookieConsent() {
       <div className="container mx-auto max-w-7xl px-4">
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div className="flex-1">
-            <h3 className="font-semibold text-foreground mb-2">Política de Cookies</h3>
+            <h3 className="font-semibold text-foreground mb-2">
+              Política de Cookies
+            </h3>
             <p className="text-sm text-foreground/70">
-              Utilizamos cookies para analizar o comportamento dos usuários e fornecer uma melhor
-              experiência. Seus dados ajudam a entender como você usa nosso site.
+              Utilizamos cookies para analizar o comportamento dos usuários e
+              fornecer uma melhor experiência. Seus dados ajudam a entender como
+              você usa nosso site.
             </p>
           </div>
 
