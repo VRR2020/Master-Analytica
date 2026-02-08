@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import { useVisitorTracking } from "@/hooks/useVisitorTracking";
 import {
   BarChart3,
   Brain,
@@ -13,6 +14,7 @@ import {
 } from "lucide-react";
 
 export default function Index() {
+  useVisitorTracking();
   return (
     <>
       <Header />
