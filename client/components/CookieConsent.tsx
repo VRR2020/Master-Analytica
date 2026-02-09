@@ -16,32 +16,12 @@ export default function CookieConsent() {
 
   const handleAccept = () => {
     localStorage.setItem("master_analytica_cookie_consent", "accepted");
-    localStorage.setItem("cookie_consent_date", new Date().toISOString());
-
-    // Track that cookies were accepted
-    trackPageEvent("cookie_consent_accepted");
-
     setShowBanner(false);
   };
 
   const handleReject = () => {
     localStorage.setItem("master_analytica_cookie_consent", "rejected");
-    localStorage.setItem("cookie_consent_date", new Date().toISOString());
     setShowBanner(false);
-  };
-
-  const trackPageEvent = (eventType: string) => {
-    // Send tracking data to server
-    fetch("/api/track", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        eventType,
-        timestamp: new Date().toISOString(),
-        page: window.location.pathname,
-        userAgent: navigator.userAgent,
-      }),
-    }).catch((err) => console.log("Tracking:", err));
   };
 
   if (!showBanner) return null;
@@ -55,9 +35,7 @@ export default function CookieConsent() {
               Política de Cookies
             </h3>
             <p className="text-sm text-foreground/70">
-              Utilizamos cookies para analizar o comportamento dos usuários e
-              fornecer uma melhor experiência. Seus dados ajudam a entender como
-              você usa nosso site.
+              Utilizamos cookies para melhorar sua experiência no site.
             </p>
           </div>
 
