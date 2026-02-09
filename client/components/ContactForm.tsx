@@ -120,7 +120,16 @@ export default function ContactForm() {
           </div>
 
           {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form
+            action="https://formsubmit.co/victor.have@gmail.com"
+            method="POST"
+            onSubmit={(e) => {
+              if (!validateForm()) {
+                e.preventDefault();
+              }
+            }}
+            className="space-y-6"
+          >
             <div>
               <label
                 htmlFor="name"
@@ -136,6 +145,7 @@ export default function ContactForm() {
                 onChange={handleInputChange}
                 className="w-full rounded-lg border border-input bg-background px-4 py-2 text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-accent"
                 placeholder="Seu nome"
+                required
               />
               {errors.name && (
                 <p className="text-destructive text-sm mt-1">{errors.name}</p>
@@ -157,6 +167,7 @@ export default function ContactForm() {
                 onChange={handleInputChange}
                 className="w-full rounded-lg border border-input bg-background px-4 py-2 text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-accent"
                 placeholder="seu@email.com"
+                required
               />
               {errors.email && (
                 <p className="text-destructive text-sm mt-1">{errors.email}</p>
@@ -214,6 +225,7 @@ export default function ContactForm() {
                 rows={5}
                 className="w-full rounded-lg border border-input bg-background px-4 py-2 text-foreground placeholder:text-foreground/40 focus:outline-none focus:ring-2 focus:ring-accent"
                 placeholder="Descreva seu projeto ou demanda..."
+                required
               />
               {errors.message && (
                 <p className="text-destructive text-sm mt-1">
@@ -222,33 +234,11 @@ export default function ContactForm() {
               )}
             </div>
 
-            <div className="flex items-start gap-3">
-              <input
-                type="checkbox"
-                id="consent"
-                checked={cookieConsent}
-                onChange={(e) => setCookieConsent(e.target.checked)}
-                className="mt-1 cursor-pointer"
-              />
-              <label
-                htmlFor="consent"
-                className="text-sm text-foreground/70 cursor-pointer"
-              >
-                Concordo em receber comunicações e aceito a política de cookies
-                para análise de dados de marketing.
-              </label>
-            </div>
-            {errors.consent && (
-              <p className="text-destructive text-sm">{errors.consent}</p>
-            )}
-
             <button
               type="submit"
-              disabled={isSubmitting}
-              className="w-full rounded-lg bg-accent px-6 py-3 text-accent-foreground hover:opacity-90 transition-opacity font-semibold flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full rounded-lg bg-accent px-6 py-3 text-accent-foreground hover:opacity-90 transition-opacity font-semibold"
             >
-              {isSubmitting && <Loader size={18} className="animate-spin" />}
-              {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
+              Enviar Mensagem
             </button>
           </form>
         </div>
