@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Loader } from "lucide-react";
-import { toast } from "sonner";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 interface FormData {
   name: string;
@@ -24,8 +23,6 @@ export default function ContactForm() {
   });
 
   const [errors, setErrors] = useState<FormErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [cookieConsent, setCookieConsent] = useState(false);
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -42,10 +39,6 @@ export default function ContactForm() {
 
     if (!formData.message.trim()) {
       newErrors.message = "Mensagem é obrigatória";
-    }
-
-    if (!cookieConsent) {
-      newErrors.consent = "Você deve aceitar a política de cookies";
     }
 
     setErrors(newErrors);
@@ -65,44 +58,6 @@ export default function ContactForm() {
         ...prev,
         [name]: "",
       }));
-    }
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (!validateForm()) {
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) {
-        throw new Error("Erro ao enviar formulário");
-      }
-
-      toast.success("Mensagem enviada com sucesso!");
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        phone: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error("Error:", error);
-      toast.error("Erro ao enviar mensagem. Tente novamente.");
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
