@@ -130,6 +130,11 @@ export default function ContactForm() {
             }}
             className="space-y-6"
           >
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nova Solicitação de Contato - Portal Master Analytica"
+            />
             <div>
               <label
                 htmlFor="name"

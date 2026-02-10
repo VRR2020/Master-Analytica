@@ -51,4 +51,23 @@ const App = () => (
   </QueryClientProvider>
 );
 
-createRoot(document.getElementById("root")!).render(<App />);
+// Store root reference globally to prevent multiple createRoot calls during HMR
+declare global {
+  interface Window {
+    _reactRoot?: any;
+  }
+}
+
+const rootElement = document.getElementById("root");
+
+if (rootElement) {
+  if (rootElement._reactRoot) {
+    // Root already exists, reuse it (happens during HMR)
+    rootElement._reactRoot.render(<App />);
+  } else {
+    // Create new root and store reference
+    const root = createRoot(rootElement);
+    (rootElement as any)._reactRoot = root;
+    root.render(<App />);
+  }
+}
