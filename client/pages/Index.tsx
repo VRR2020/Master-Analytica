@@ -11,6 +11,7 @@ import {
   Database,
   ArrowRight,
   CheckCircle2,
+  Sparkles,
 } from "lucide-react";
 
 export default function Index() {
@@ -20,12 +21,32 @@ export default function Index() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary to-primary/90 text-primary-foreground pt-20 pb-28 md:pt-32 md:pb-40">
-        <div className="container mx-auto max-w-7xl px-4 md:px-8">
+      <section
+        className="relative overflow-hidden text-primary-foreground pt-20 pb-28 md:pt-32 md:pb-40"
+        style={{
+          backgroundImage: 'url(/hero-bg-ai.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
+      >
+        {/* Overlay for readability */}
+        <div className="absolute inset-0 bg-black/50"></div>
+
+        <div className="container mx-auto max-w-7xl px-4 md:px-8 relative z-10">
           <div className="grid gap-12 items-center md:grid-cols-2">
             <div>
-              <div className="mb-6 inline-block rounded-full bg-accent/20 px-4 py-2 text-sm font-semibold text-accent">
-                Transforme seus dados em inteligência
+              <div className="mb-8 flex flex-col sm:flex-row sm:items-center gap-3">
+                {/* New N8N Badge */}
+                <div className="inline-flex items-center gap-2 rounded-full bg-red-500/90 px-4 py-2 text-sm font-semibold text-white animate-pulse-subtle">
+                  <Sparkles size={16} className="text-white" />
+                  <span>Novo: Orquestrador de IA com N8N</span>
+                </div>
+
+                {/* Original Badge */}
+                <div className="inline-block rounded-full bg-accent/30 px-4 py-2 text-sm font-semibold text-accent">
+                  Transforme seus dados em inteligência
+                </div>
               </div>
 
               <h1 className="mb-6 text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
@@ -72,7 +93,21 @@ export default function Index() {
 
             <div className="hidden md:flex justify-center">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-accent/10 rounded-2xl blur-3xl"></div>
+                {/* Animated background glow */}
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/40 to-accent/20 rounded-2xl blur-3xl animate-pulse"></div>
+
+                {/* Animated icons around owl */}
+                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                  <Brain size={32} className="text-accent" />
+                </div>
+                <div className="absolute -bottom-8 left-0 animate-float">
+                  <Zap size={32} className="text-accent" />
+                </div>
+                <div className="absolute -bottom-8 right-0 animate-float-reverse">
+                  <TrendingUp size={32} className="text-accent" />
+                </div>
+
+                {/* Owl emoji */}
                 <div className="relative text-9xl">🦉</div>
               </div>
             </div>
